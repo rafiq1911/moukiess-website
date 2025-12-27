@@ -61,12 +61,28 @@ body {
     background: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
 }
 
 /* ========================================
@@ -1182,54 +1198,92 @@ body {
 }
 
 @media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    
     .navbar-content {
         padding: 12px 0;
+        gap: 10px;
     }
     
     .logo-text {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .logo-tagline {
+        font-size: 0.6rem;
     }
     
     .hero-slider {
         height: 400px;
         margin-top: 65px;
+        width: 100%;
+    }
+    
+    .hero-content {
+        padding: 20px;
+        max-width: 100%;
     }
     
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
     }
     
     .btn-hero {
         width: 100%;
         max-width: 300px;
+        padding: 12px 25px;
+        font-size: 0.9rem;
     }
     
     .categories-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .category-card {
+        padding: 25px 20px;
     }
     
     .products-grid-ecommerce {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .product-card-ecommerce {
+        max-width: 100%;
     }
     
     .about-content {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .about-stats {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .stat-box {
+        padding: 15px;
     }
     
     .instagram-gallery {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
     
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .back-to-top {
@@ -1237,14 +1291,56 @@ body {
         right: 20px;
         bottom: 100px;
     }
+    
+    .navbar-ecommerce {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .section-title-ecommerce {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
     .products-grid-ecommerce {
         grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .product-card-ecommerce {
+        margin: 0 auto;
+        max-width: 100%;
     }
     
     .instagram-gallery {
         grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .hero-slider {
+        height: 350px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title-ecommerce {
+        font-size: 1.8rem;
+    }
+    
+    .navbar-actions {
+        gap: 8px;
+    }
+    
+    .nav-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
     }
 }
