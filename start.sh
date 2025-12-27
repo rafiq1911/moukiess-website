@@ -9,14 +9,10 @@ php artisan cache:clear
 php artisan view:clear
 php artisan route:clear
 
-# Wait for database to be ready
-echo "Waiting for database..."
-php wait-for-db.php
-
-if [ $? -ne 0 ]; then
-    echo "❌ Database not ready, exiting..."
-    exit 1
-fi
+# Create SQLite database file if not exists
+echo "Setting up SQLite database..."
+touch /app/database/database.sqlite
+chmod 664 /app/database/database.sqlite
 
 # Run migrations
 echo "Running migrations..."
