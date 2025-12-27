@@ -18,8 +18,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="{{ asset('css/ecommerce-style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/moukiess-features.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/ecommerce-style.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/moukiess-features.css') }}">
 </head>
 <body>
     
@@ -196,7 +196,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('js/moukiess-cart.js') }}"></script>
-    <script src="{{ asset('js/ecommerce-script.js') }}"></script>
+    <script src="{{ secure_asset('js/ecommerce-script.js') }}"></script>
     
     <script>
         // Initialize AOS
