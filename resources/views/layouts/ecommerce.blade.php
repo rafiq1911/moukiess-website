@@ -195,7 +195,7 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="{{ asset('js/moukiess-cart.js') }}"></script>
+    <script src="{{ secure_asset('js/moukiess-cart.js') }}"></script>
     <script src="{{ secure_asset('js/ecommerce-script.js') }}"></script>
     
     <script>
