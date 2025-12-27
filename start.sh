@@ -9,9 +9,14 @@ php artisan cache:clear
 php artisan view:clear
 php artisan route:clear
 
-# Wait for database
+# Wait for database to be ready
 echo "Waiting for database..."
-sleep 5
+php wait-for-db.php
+
+if [ $? -ne 0 ]; then
+    echo "❌ Database not ready, exiting..."
+    exit 1
+fi
 
 # Run migrations
 echo "Running migrations..."
