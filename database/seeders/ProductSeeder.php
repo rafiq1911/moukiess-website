@@ -12,6 +12,9 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
+        // Clear existing products to avoid duplicates
+        Product::truncate();
+        
         $products = [
             [
                 'name' => 'Chocolate Chip Cookies',
